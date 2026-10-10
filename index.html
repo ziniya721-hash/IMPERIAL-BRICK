@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Imperial Brick — The Collector's Brick</title>
+  <meta name="description"
+    content="One brick. Seven remain. The Imperial Brick is the world's most uncompromising collectible.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="grain"></div>
+  <div class="vignette"></div>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="toast" id="toast"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 16 20" fill="none">
+          <rect x="1" y="5" width="14" height="13" rx="0.5" fill="#7a1313" stroke="#d4af37" stroke-width="0.6" />
+          <path d="M1 8.5H15M1 14.5H15" stroke="#d4af37" stroke-width="0.4" opacity="0.6" />
+        </svg>
+        IMPERIAL BRICK
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#story" class="nav-link">Story</a>
+        <a href="#game" class="nav-link">Game</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#buy" class="nav-link">Buy</a>
+      </div>
+      <div class="nav-right">
+        <a href="#buy" class="nav-cta">Acquire</a>
+        <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile-panel" id="navMobilePanel">
+      <a href="#story" class="nav-mobile-link">Story</a>
+      <a href="#game" class="nav-mobile-link">Game</a>
+      <a href="#reviews" class="nav-mobile-link">Reviews</a>
+      <a href="#buy" class="nav-mobile-link">Buy</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-eyebrow">No. 1 of 7 Remaining — Est. House of Imperial</div>
+    <h1>The Imperial Brick<span>A Single Object of Uncommon Mass</span></h1>
+    <p class="hero-sub">Fired once. Owned by few. The Imperial Brick is not a building material — it is the most honest
+      luxury object ever made: nothing but itself, and entirely certain of it.</p>
+
+    <div class="brick-stage">
+      <div class="brick-pedestal-glow"></div>
+      <div class="brick-scene">
+        <div class="brick-3d" id="brick3d">
+          <div class="brick-face front">
+            <div class="brick-seal">IB</div>
+          </div>
+          <div class="brick-face back"></div>
+          <div class="brick-face right"></div>
+          <div class="brick-face left"></div>
+          <div class="brick-face top"></div>
+          <div class="brick-face bottom"></div>
+        </div>
+      </div>
+      <div class="brick-reflection"></div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#buy" class="btn-luxury">Acquire Yours <span class="arrow">→</span></a>
+      <a href="#game" class="btn-ghost">Play to Unlock VIP</a>
+    </div>
+
+    <div class="stock-pill"><span class="dot"></span> Only <strong>7</strong> remain in existence — none will be
+      reissued</div>
+
+    <div class="scroll-cue"><span class="line"></span>Scroll</div>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>HAND-SELECTED CLAY <b>·</b> FIRED ONCE <b>·</b> NEVER REPRODUCED <b>·</b> CERTIFICATE OF AUTHENTICITY
+        <b>·</b> SEVEN IN EXISTENCE <b>·</b></span>
+      <span>HAND-SELECTED CLAY <b>·</b> FIRED ONCE <b>·</b> NEVER REPRODUCED <b>·</b> CERTIFICATE OF AUTHENTICITY
+        <b>·</b> SEVEN IN EXISTENCE <b>·</b></span>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-copy reveal">
+          <span class="story-mark">"</span>
+          <p>It began, as the finest things do, with a refusal. A refusal to add anything. No glaze, no engraving, no
+            gold leaf to apologize for what it is.</p>
+          <p>Every Imperial Brick is drawn from a single clay deposit, fired at exactly 1,000°C in a kiln used for
+            nothing else, and left to cool for nine days under conditions our master has declined to disclose. The
+            result is a red so dense it seems to hold its own shadow.</p>
+          <p>We do not sell bricks. We release them — slowly, rarely, and only to people who understand that the rarest
+            luxury left in the world is something that refuses to be more than what it is.</p>
+          <p>There were never more than twelve. Five have already found permanent homes — one in a private vault in
+            Geneva, one on a collector's mantel in Kyoto. Seven remain. There will not be an eighth.</p>
+        </div>
+        <div class="provenance-card reveal">
+          <dl>
+            <div class="prov-row">
+              <dt>Material</dt>
+              <dd>Single-Origin Fired Clay</dd>
+            </div>
+            <div class="prov-row">
+              <dt>Weight</dt>
+              <dd>2.3 kg (5.07 lb)</dd>
+            </div>
+            <div class="prov-row">
+              <dt>Firing</dt>
+              <dd>1,000°C · Single Pass</dd>
+            </div>
+            <div class="prov-row">
+              <dt>Edition</dt>
+              <dd>7 of 12, Numbered</dd>
+            </div>
+            <div class="prov-row">
+              <dt>Certificate</dt>
+              <dd>Hand-Signed, Sealed</dd>
+            </div>
+            <div class="prov-row">
+              <dt>Reproduction</dt>
+              <dd>Permanently Discontinued</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="stats">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">The Ledger</div>
+        <h2 class="section-title">Provenance, By the Numbers</h2>
+      </div>
+      <div class="stats-grid reveal-stagger" id="statsGrid">
+        <div class="stat-cell">
+          <div class="stat-num" data-target="12" data-suffix="">0</div>
+          <div class="stat-label">Ever Produced</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="7" data-suffix="">0</div>
+          <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="1000" data-suffix="°C">0</div>
+          <div class="stat-label">Firing Temperature</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="9" data-suffix=" Days">0</div>
+          <div class="stat-label">Cooling Period</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section class="game-section" id="game">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:48px;">
+        <div class="eyebrow" style="justify-content:center;">Members' Pursuits</div>
+        <h2 class="section-title">Prove Your Worth</h2>
+        <p class="section-lede" style="margin:0 auto;">Two trials. One badge. Choose your pursuit.</p>
+      </div>
+
+      <div class="game-tabs reveal">
+        <button class="game-tab active" id="tabCatch" data-game="catch">
+          <span class="tab-num">I.</span> Catch the Golden Brick
+        </button>
+        <button class="game-tab" id="tabRitual" data-game="ritual">
+          <span class="tab-num">II.</span> The Authentication Ritual
+        </button>
+      </div>
+
+      <div class="game-grid" id="panelCatch">
+        <div class="game-copy reveal">
+          <div class="eyebrow">Members' Pursuit I</div>
+          <h2>Catch the<br>Golden Brick</h2>
+          <p>House tradition holds that before any acquisition, a collector must prove their reflexes. Catch ten falling
+            golden bricks before the basket — and the bell — runs out, and you'll unlock the Imperial VIP Badge.</p>
+          <ul class="game-rules">
+            <li><span class="num">1</span> Move the velvet tray with your mouse, finger, or arrow keys.</li>
+            <li><span class="num">2</span> Catch gold bricks. Avoid the plain grey ones — they cost you a strike.</li>
+            <li><span class="num">3</span> Catch 10 gold bricks within 45 seconds to earn your badge.</li>
+          </ul>
+          <button class="btn-luxury btn-small" id="startGameBtn">Begin the Pursuit <span class="arrow">→</span></button>
+          <div class="game-progress-row">
+            <div class="game-progress-track">
+              <div class="game-progress-fill" id="progressFill"></div>
+            </div>
+            <div class="game-progress-label" id="progressLabel">0 / 10 caught</div>
+          </div>
+        </div>
+
+        <div class="game-stage" id="gameStage">
+          <div class="game-hud">
+            <div>Strikes: <span class="timer" id="strikesDisplay">0 / 3</span></div>
+            <div class="score" id="scoreDisplay">0 / 10</div>
+            <div class="timer" id="timeDisplay">0:45</div>
+          </div>
+          <div class="game-canvas-wrap" id="gameCanvasWrap">
+            <svg class="basket" id="basket" viewBox="0 0 84 46" style="left:50%;">
+              <path d="M6 6 L78 6 L70 40 Q42 48 14 40 Z" fill="#2a0d0d" stroke="#d4af37" stroke-width="1.4" />
+              <path d="M6 6 L78 6" stroke="#d4af37" stroke-width="1.4" />
+              <circle cx="42" cy="6" r="3" fill="#d4af37" />
+            </svg>
+          </div>
+          <div class="game-overlay" id="gameOverlayStart">
+            <div class="eyebrow" style="justify-content:center;">Members' Pursuit</div>
+            <h3>Ready When You Are</h3>
+            <p>Press begin to start the 45-second pursuit. Catch 10 golden bricks. Three strikes on a plain brick, and
+              the trial ends.</p>
+            <button class="btn-luxury btn-small" id="overlayStartBtn">Begin <span class="arrow">→</span></button>
+          </div>
+          <div class="game-overlay hidden" id="gameOverlayWin">
+            <div class="vip-badge">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.5 8.5L21 9.3L16 14L17.5 21L12 17.3L6.5 21L8 14L3 9.3L9.5 8.5L12 2Z" fill="#d4af37" />
+              </svg>
+            </div>
+            <h3 class="gold-text">VIP Status Unlocked</h3>
+            <p>You've earned the Imperial Badge — recognition reserved for members who've proven worthy of the pursuit.
+              Your badge has been noted on your acquisition.</p>
+            <button class="btn-luxury btn-small" id="claimBadgeBtn">Claim Badge <span class="arrow">→</span></button>
+          </div>
+          <div class="game-overlay hidden" id="gameOverlayLose">
+            <h3>The Trial Ends</h3>
+            <p id="loseMessage">Three plain bricks slipped past the tray. Even the finest collectors are permitted a
+              second attempt.</p>
+            <button class="btn-luxury btn-small" id="retryBtn">Try Again <span class="arrow">→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-grid" id="panelRitual" style="display:none;">
+        <div class="game-copy reveal">
+          <div class="eyebrow">Members' Pursuit II</div>
+          <h2>The Authentication<br>Ritual</h2>
+          <p>Every Imperial Brick must be sealed by hand. Stop the rotating dial inside the gold zone — three times in
+            succession — to authenticate your brick and unlock the Imperial VIP Badge.</p>
+          <ul class="game-rules">
+            <li><span class="num">1</span> The dial sweeps continuously. Click, tap, or press space to stop it.</li>
+            <li><span class="num">2</span> Land in the gold zone three times in a row to authenticate.</li>
+            <li><span class="num">3</span> Miss the zone, and your streak resets to zero.</li>
+          </ul>
+          <button class="btn-luxury btn-small" id="startRitualBtn">Begin the Ritual <span
+              class="arrow">→</span></button>
+          <div class="game-progress-row">
+            <div class="game-progress-track">
+              <div class="game-progress-fill" id="ritualProgressFill"></div>
+            </div>
+            <div class="game-progress-label" id="ritualProgressLabel">0 / 3 sealed</div>
+          </div>
+        </div>
+
+        <div class="game-stage" id="ritualStage">
+          <div class="game-hud">
+            <div>Streak: <span class="timer" id="ritualStreakDisplay">0 / 3</span></div>
+            <div class="score" id="ritualAttemptsDisplay">0 attempts</div>
+            <div class="timer" id="ritualBestDisplay">Best: —</div>
+          </div>
+          <div class="ritual-canvas-wrap" id="ritualCanvasWrap">
+            <svg viewBox="0 0 300 300" class="ritual-dial-svg">
+              <circle cx="150" cy="150" r="118" fill="none" stroke="rgba(243,236,223,0.08)" stroke-width="22" />
+              <path id="ritualGoldZone" d="" fill="none" stroke="#d4af37" stroke-width="22" stroke-linecap="round" />
+              <circle cx="150" cy="150" r="86" fill="#0d0b0a" stroke="rgba(212,175,55,0.25)" stroke-width="1" />
+              <g id="ritualNeedle" transform="rotate(0 150 150)">
+                <line x1="150" y1="150" x2="150" y2="42" stroke="#f3ecdf" stroke-width="3" stroke-linecap="round" />
+                <circle cx="150" cy="150" r="7" fill="#d4af37" />
+              </g>
+              <circle cx="150" cy="42" r="0" id="ritualMarkerGhost" fill="none" />
+            </svg>
+            <div class="ritual-seal-stack" id="ritualSealStack">
+              <span class="ritual-seal-dot"></span>
+              <span class="ritual-seal-dot"></span>
+              <span class="ritual-seal-dot"></span>
+            </div>
+          </div>
+          <div class="game-overlay" id="ritualOverlayStart">
+            <div class="eyebrow" style="justify-content:center;">Members' Pursuit II</div>
+            <h3>The Seal Awaits</h3>
+            <p>Press begin, then stop the dial inside the gold arc three times in a row. The arc narrows each round.</p>
+            <button class="btn-luxury btn-small" id="ritualOverlayStartBtn">Begin <span class="arrow">→</span></button>
+          </div>
+          <div class="game-overlay hidden" id="ritualOverlayWin">
+            <div class="vip-badge">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.5 8.5L21 9.3L16 14L17.5 21L12 17.3L6.5 21L8 14L3 9.3L9.5 8.5L12 2Z" fill="#d4af37" />
+              </svg>
+            </div>
+            <h3 class="gold-text">Brick Authenticated</h3>
+            <p>Three perfect seals. Your Imperial Badge has been noted on your acquisition.</p>
+            <button class="btn-luxury btn-small" id="ritualClaimBtn">Claim Badge <span class="arrow">→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="leaderboard reveal" id="leaderboard">
+        <div class="leaderboard-head">
+          <h3>Hall of Collectors</h3>
+          <span class="leaderboard-note">This session only — the House keeps no permanent record.</span>
+        </div>
+        <div class="leaderboard-table">
+          <div class="lb-row lb-header">
+            <span>Rank</span><span>Collector</span><span>Pursuit</span><span>Result</span>
+          </div>
+          <div id="leaderboardBody">
+            <div class="lb-row lb-empty"><span colspan="4"
+                style="grid-column:1/-1; text-align:center; color:var(--bone-dim);">No trials completed yet this
+                session.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;">Among Owners</div>
+        <h2 class="section-title">What Collectors Say</h2>
+      </div>
+      <div class="reviews-grid reveal-stagger">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>I have a wine cellar and a watch safe. The Imperial Brick is the only thing in my home that visitors ask
+            about unprompted. It simply commands the room.</p>
+          <div class="review-who">
+            <div class="review-avatar">A.</div>
+            <div>
+              <div class="review-name">A. Vance Whitfield</div>
+              <div class="review-title">Brick No. 3, Geneva</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>My interior designer initially laughed. She has since asked for the acquisition team's contact information
+            for herself.</p>
+          <div class="review-who">
+            <div class="review-avatar">M.</div>
+            <div>
+              <div class="review-name">Margot Reyes-Lindqvist</div>
+              <div class="review-title">Brick No. 9, Kyoto</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>The certificate alone is framed in our foyer. The brick itself sits under glass. Both receive more
+            compliments than the actual house.</p>
+          <div class="review-who">
+            <div class="review-avatar">D.</div>
+            <div>
+              <div class="review-name">Desmond Achterberg</div>
+              <div class="review-title">Brick No. 11, London</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUY -->
+  <section class="buy" id="buy">
+    <div class="wrap">
+      <div class="buy-card reveal">
+        <div class="eyebrow" style="justify-content:center;">Final Release</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3.6vw,40px);">Reserve Your Imperial Brick</h2>
+        <div class="buy-price"><span class="was">$4,800</span><span class="amount">$2,400</span></div>
+        <div class="buy-note">Numbered, hand-signed certificate of authenticity included. Climate-stable display case
+          included.</div>
+        <div class="buy-stock"><span class="dot"></span> Only <strong id="buyStockCount">7</strong> Left — Demand
+          Updates Live</div>
+        <div>
+          <button class="btn-luxury" id="buyNowBtn">Buy Now — Reserve Mine <span class="arrow">→</span></button>
+        </div>
+        <div class="buy-note" style="margin-top:22px; margin-bottom:0;">No returns. No exceptions. That is the point.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 16 20" fill="none">
+          <rect x="1" y="5" width="14" height="13" rx="0.5" fill="#7a1313" stroke="#d4af37" stroke-width="0.6" />
+        </svg>
+        IMPERIAL BRICK
+      </div>
+      <p>The Imperial Brick is a satirical luxury collectible sold purely for amusement. No actual masonry products are
+        shipped, harmed, or fired at suspiciously specific temperatures.</p>
+      <p class="fine">© 2026 House of Imperial. All rights reserved, mostly out of spite.</p>
+    </div>
+  </footer>
+
+  <!-- RESERVATION CONFIRMED FULLSCREEN OVERLAY -->
+  <div class="conf-overlay" id="confOverlay" aria-hidden="true">
+
+    <!-- LEFT PANEL -->
+    <div class="conf-left">
+      <div class="conf-quote-block">
+        <p class="conf-quote-line">You didn't purchase a brick.</p>
+        <span class="conf-diamond">✦</span>
+        <p class="conf-quote-line conf-quote-italic">You became part of its story.</p>
+      </div>
+      <div class="conf-brick-scene">
+        <div class="brick-stage conf-brick-stage">
+          <div class="brick-pedestal-glow"></div>
+          <div class="brick-scene">
+            <div class="brick-3d" id="confBrick3d">
+              <div class="brick-face front">
+                <div class="brick-seal">IB</div>
+              </div>
+              <div class="brick-face back"></div>
+              <div class="brick-face right"></div>
+              <div class="brick-face left"></div>
+              <div class="brick-face top"></div>
+              <div class="brick-face bottom"></div>
+            </div>
+          </div>
+          <div class="brick-reflection"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="conf-right">
+      <div class="conf-star-badge">
+        <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+          <path d="M12 2L14.5 8.5L21 9.3L16 14L17.5 21L12 17.3L6.5 21L8 14L3 9.3L9.5 8.5L12 2Z" fill="#d4af37"/>
+        </svg>
+      </div>
+      <h2 class="conf-title">Reservation Confirmed</h2>
+      <p class="conf-subtitle" id="confOverlayText">Brick No. 6 of 12 has been reserved in your name.</p>
+      <div class="conf-receipt-card" id="confOverlayReceipt"></div>
+      <button class="conf-done-btn" id="confOverlayDoneBtn">DONE &nbsp;→</button>
+    </div>
+
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="checkout-topbar">
+      <div class="checkout-brand">
+        <svg class="mark" viewBox="0 0 16 20" fill="none">
+          <rect x="1" y="5" width="14" height="13" rx="0.5" fill="#7a1313" stroke="#d4af37" stroke-width="0.6" />
+        </svg>
+        IMPERIAL BRICK
+      </div>
+      <div class="checkout-topbar-label">Secure Reservation</div>
+      <button class="checkout-close" id="checkoutClose" aria-label="Close">&times;</button>
+    </div>
+
+    <div class="checkout-body">
+      <div class="checkout-step" id="checkoutStepForm">
+        <div class="checkout-form-col">
+          <div class="eyebrow">Final Release</div>
+          <h3>Reserve Your Imperial Brick</h3>
+          <p class="checkout-sub">Brick No. 6 of 12 will be set aside in your name for 24 hours. No payment is processed
+            on this page.</p>
+
+          <form id="checkoutForm" novalidate>
+            <div class="checkout-section-label">Contact Information</div>
+            <div class="checkout-field">
+              <label for="ckName">Full Name</label>
+              <input type="text" id="ckName" name="name" placeholder="A. Vance Whitfield" required autocomplete="name">
+              <span class="checkout-error" id="errName"></span>
+            </div>
+            <div class="checkout-field">
+              <label for="ckEmail">Email Address</label>
+              <input type="email" id="ckEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+              <span class="checkout-error" id="errEmail"></span>
+            </div>
+
+            <div class="checkout-section-label">Shipping Address</div>
+            <div class="checkout-field">
+              <label for="ckAddress">Street Address</label>
+              <input type="text" id="ckAddress" name="address" placeholder="Street address" required
+                autocomplete="street-address">
+              <span class="checkout-error" id="errAddress"></span>
+            </div>
+            <div class="checkout-row">
+              <div class="checkout-field">
+                <label for="ckCity">City</label>
+                <input type="text" id="ckCity" name="city" placeholder="City" required autocomplete="address-level2">
+                <span class="checkout-error" id="errCity"></span>
+              </div>
+              <div class="checkout-field">
+                <label for="ckPostal">Postal Code</label>
+                <input type="text" id="ckPostal" name="postal" placeholder="Postal Code" required
+                  autocomplete="postal-code">
+                <span class="checkout-error" id="errPostal"></span>
+              </div>
+            </div>
+            <div class="checkout-field">
+              <label for="ckCountry">Country</label>
+              <input type="text" id="ckCountry" name="country" placeholder="Country" required
+                autocomplete="country-name">
+              <span class="checkout-error" id="errCountry"></span>
+            </div>
+
+            <button type="submit" class="btn-luxury checkout-submit" id="checkoutSubmitBtn">
+              Reserve Mine <span class="arrow">→</span>
+            </button>
+            <p class="checkout-disclaimer">This is a satirical demo. No payment is collected and no brick will ship.</p>
+          </form>
+        </div>
+
+        <div class="checkout-summary-col">
+          <div class="checkout-summary-card">
+            <div class="checkout-section-label">Order Summary</div>
+            <div class="checkout-product">
+              <div class="checkout-product-thumb">
+                <svg viewBox="0 0 220 100" width="100%" height="100%">
+                  <rect x="2" y="2" width="216" height="96" rx="3" fill="#7a1313" stroke="#d4af37" stroke-width="1.2" />
+                  <path d="M2 32H218M2 64H218" stroke="#d4af37" stroke-opacity="0.4" stroke-width="0.6" />
+                </svg>
+              </div>
+              <div class="checkout-product-info">
+                <div class="checkout-product-name">Imperial Brick</div>
+                <div class="checkout-product-meta">Numbered Edition · 7 of 12</div>
+              </div>
+              <div class="checkout-product-price">$2,400</div>
+            </div>
+            <div class="checkout-line"><span>Subtotal</span><span>$2,400.00</span></div>
+            <div class="checkout-line"><span>Certificate &amp; Display Case</span><span>Included</span></div>
+            <div class="checkout-line"><span>Shipping</span><span>Complimentary</span></div>
+            <div class="checkout-line checkout-line-total"><span>Total Due Today</span><span>$0.00</span></div>
+            <div class="checkout-summary-note">No payment is processed on this demo. Total reflects a satirical $0.00 charge.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    /* ================= NAV SCROLL STATE ================= */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ================= MOBILE NAV MENU ================= */
+    const navBurger = document.getElementById('navBurger');
+    const navMobilePanel = document.getElementById('navMobilePanel');
+    navBurger.addEventListener('click', () => {
+      const isOpen = navMobilePanel.classList.toggle('open');
+      navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.nav-mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobilePanel.classList.remove('open');
+        navBurger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ================= SCROLL REVEAL ================= */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+    revealEls.forEach(el => io.observe(el));
+
+    // Failsafe: if an element is already on/near screen at load (e.g. tall viewport,
+    // zoomed-out browser, or the observer firing later than expected), make sure it
+    // still becomes visible rather than staying permanently at opacity:0.
+    function failsafeReveal() {
+      revealEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('is-visible');
+        }
+      });
+    }
+    failsafeReveal();
+    window.addEventListener('load', failsafeReveal);
+    setTimeout(failsafeReveal, 1200);
+
+    /* ================= ANIMATED STATS ================= */
+    const statNums = document.querySelectorAll('.stat-num');
+    let statsAnimated = false;
+    const statsSection = document.getElementById('stats');
+    const statsIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          statNums.forEach(el => {
+            const target = parseInt(el.dataset.target, 10);
+            const suffix = el.dataset.suffix || "";
+            const duration = 1400;
+            const start = performance.now();
+            function tick(now) {
+              const p = Math.min(1, (now - start) / duration);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.round(eased * target) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    statsIO.observe(statsSection);
+
+    /* ================= 3D BRICK DRAG TO SPIN ================= */
+    const brick = document.getElementById('brick3d');
+    let isDragging = false, startX = 0, currentRotY = 0, dragRotY = 0;
+    let autoRotate = true;
+
+    function pauseAuto() {
+      if (autoRotate) {
+        autoRotate = false;
+        brick.style.animation = 'none';
+        const computed = getComputedStyle(brick).transform;
+        brick.style.transform = computed === 'none' ? '' : computed;
+      }
+    }
+    brick.addEventListener('pointerdown', (e) => {
+      isDragging = true;
+      pauseAuto();
+      startX = e.clientX;
+      brick.setPointerCapture(e.pointerId);
+    });
+    window.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      startX = e.clientX;
+      dragRotY += dx * 0.5;
+      brick.style.transform = `rotateY(${dragRotY}deg) rotateX(-8deg)`;
+    });
+    window.addEventListener('pointerup', () => { isDragging = false; });
+
+    /* ================= TOAST ================= */
+    const toastEl = document.getElementById('toast');
+    let toastTimer;
+    function showToast(msg) {
+      toastEl.innerHTML = `<span class="gold-dot"></span> ${msg}`;
+      toastEl.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove('show'), 3200);
+    }
+
+    /* ================= LIVE STOCK COUNTER (simulated) ================= */
+    const buyStockCount = document.getElementById('buyStockCount');
+    let stockNames = ["A collector in Zürich", "A buyer in Singapore", "A member in São Paulo", "A guest in Dubai", "A collector in Vancouver"];
+    let currentStock = 7;
+
+    function maybeDecrementStock() {
+      if (currentStock <= 4) return; // never drops below 4 in this session — preserves scarcity without zeroing out
+      if (Math.random() < 0.5) {
+        currentStock--;
+        buyStockCount.textContent = currentStock;
+        buyStockCount.style.transition = 'none';
+        buyStockCount.style.transform = 'scale(1.4)';
+        buyStockCount.style.color = '#ff7a7a';
+        requestAnimationFrame(() => {
+          buyStockCount.style.transition = 'transform .4s ease, color .6s ease';
+          buyStockCount.style.transform = 'scale(1)';
+        });
+        showToast(stockNames[Math.floor(Math.random() * stockNames.length)] + " just reserved a brick");
+      }
+    }
+
+    setTimeout(() => {
+      showToast(stockNames[Math.floor(Math.random() * stockNames.length)] + " is viewing this brick");
+    }, 6000);
+    setTimeout(maybeDecrementStock, 16000);
+    setTimeout(maybeDecrementStock, 34000);
+
+    /* ================= CHECKOUT MODAL ================= */
+    (function () {
+      const modal = document.getElementById('checkoutModal');
+      const closeBtn = document.getElementById('checkoutClose');
+      const form = document.getElementById('checkoutForm');
+      const stepForm = document.getElementById('checkoutStepForm');
+      const submitBtn = document.getElementById('checkoutSubmitBtn');
+
+      // New full-screen overlay references
+      const confOverlay = document.getElementById('confOverlay');
+      const confOverlayText = document.getElementById('confOverlayText');
+      const confOverlayReceipt = document.getElementById('confOverlayReceipt');
+      const confOverlayDoneBtn = document.getElementById('confOverlayDoneBtn');
+
+      const fields = ['name', 'email', 'address', 'city', 'postal', 'country'];
+      let lastFocused = null;
+
+      function openModal() {
+        lastFocused = document.activeElement;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        stepForm.hidden = false;
+        setTimeout(() => document.getElementById('ckName').focus(), 350);
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+      }
+
+      function showOverlay() {
+        confOverlay.classList.add('open');
+        confOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideOverlay() {
+        confOverlay.classList.remove('open');
+        confOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('buyNowBtn').addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      confOverlayDoneBtn.addEventListener('click', hideOverlay);
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (modal.classList.contains('open')) closeModal();
+          if (confOverlay.classList.contains('open')) hideOverlay();
+        }
+      });
+
+      function clearErrors() {
+        fields.forEach(f => {
+          const input = document.getElementById('ck' + f.charAt(0).toUpperCase() + f.slice(1));
+          const err = document.getElementById('err' + f.charAt(0).toUpperCase() + f.slice(1));
+          if (input) input.classList.remove('invalid');
+          if (err) err.textContent = '';
+        });
+      }
+
+      function validateEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+
+      function showFieldError(fieldKey, message) {
+        const cap = fieldKey.charAt(0).toUpperCase() + fieldKey.slice(1);
+        const input = document.getElementById('ck' + cap);
+        const err = document.getElementById('err' + cap);
+        if (input) input.classList.add('invalid');
+        if (err) err.textContent = message;
+      }
+
+      function escapeHtml(str) {
+        return str.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        const data = {};
+        fields.forEach(f => { data[f] = document.getElementById('ck' + f.charAt(0).toUpperCase() + f.slice(1)).value.trim(); });
+
+        let hasError = false;
+        if (!data.name) { showFieldError('name', 'Please enter your full name.'); hasError = true; }
+        if (!data.email) { showFieldError('email', 'Please enter your email.'); hasError = true; }
+        else if (!validateEmail(data.email)) { showFieldError('email', 'Please enter a valid email address.'); hasError = true; }
+        if (!data.address) { showFieldError('address', 'Please enter your shipping address.'); hasError = true; }
+        if (!data.city) { showFieldError('city', 'Required.'); hasError = true; }
+        if (!data.postal) { showFieldError('postal', 'Required.'); hasError = true; }
+        if (!data.country) { showFieldError('country', 'Required.'); hasError = true; }
+
+        if (hasError) {
+          playSfx('strike');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const originalLabel = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sealing Reservation…';
+
+        setTimeout(() => {
+          const orderNumber = 'IB-' + Math.floor(100000 + Math.random() * 899999);
+          confOverlayText.textContent = `Brick No. 6 of 12 has been reserved in your name, ${data.name.split(' ')[0]}.`;
+          confOverlayReceipt.innerHTML = `
+            <div class="conf-row"><span class="conf-label">Order Reference:</span><span class="conf-val">${orderNumber}</span></div>
+            <div class="conf-row"><span class="conf-label">Name:</span><span class="conf-val">${escapeHtml(data.name)}</span></div>
+            <div class="conf-row"><span class="conf-label">Email:</span><span class="conf-val">${escapeHtml(data.email)}</span></div>
+            <div class="conf-row"><span class="conf-label">Ship To:</span><span class="conf-val">${escapeHtml(data.address)}, ${escapeHtml(data.city)} ${escapeHtml(data.postal)}, ${escapeHtml(data.country)}</span></div>
+            <div class="conf-row"><span class="conf-label">Total:</span><span class="conf-val">$2,400 — No payment collected on this demo</span></div>
+          `;
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalLabel;
+          closeModal();
+          showOverlay();
+          playSfx('win');
+          launchConfetti();
+          showToast("Reservation confirmed — welcome to the House");
+          LeaderboardModule.add("Acquisition", "Reserved", 2000 + Math.random());
+        }, 900);
+      });
+
+      // clear individual field errors as the person corrects them
+      fields.forEach(f => {
+        const cap = f.charAt(0).toUpperCase() + f.slice(1);
+        const input = document.getElementById('ck' + cap);
+        if (input) {
+          input.addEventListener('input', () => {
+            input.classList.remove('invalid');
+            const err = document.getElementById('err' + cap);
+            if (err) err.textContent = '';
+          });
+        }
+      });
+    })();
+
+
+    /* ================= SOUND ENGINE (synthesized, no audio files) ================= */
+    const SoundFX = (function () {
+      let ctx = null;
+      function getCtx() {
+        if (!ctx) {
+          try { ctx = new (window.AudioContext || window.webkitAudioContext)(); }
+          catch (e) { ctx = null; }
+        }
+        return ctx;
+      }
+      function tone(freq, duration, type, gainPeak, delay) {
+        const ac = getCtx();
+        if (!ac) return;
+        if (ac.state === 'suspended') ac.resume();
+        const t0 = ac.currentTime + (delay || 0);
+        const osc = ac.createOscillator();
+        const gain = ac.createGain();
+        osc.type = type || 'sine';
+        osc.frequency.setValueAtTime(freq, t0);
+        gain.gain.setValueAtTime(0, t0);
+        gain.gain.linearRampToValueAtTime(gainPeak || 0.12, t0 + 0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duration);
+        osc.connect(gain);
+        gain.connect(ac.destination);
+        osc.start(t0);
+        osc.stop(t0 + duration + 0.02);
+      }
+      return {
+        catch() { tone(880, 0.16, 'triangle', 0.14); tone(1320, 0.14, 'sine', 0.08, 0.03); },
+        strike() { tone(180, 0.22, 'sawtooth', 0.10); },
+        tick() { tone(660, 0.05, 'sine', 0.04); },
+        win() {
+          [660, 880, 1100, 1320].forEach((f, i) => tone(f, 0.5, 'triangle', 0.13, i * 0.11));
+        },
+        lose() { tone(220, 0.3, 'sawtooth', 0.09); tone(140, 0.4, 'sawtooth', 0.08, 0.12); },
+        seal() { tone(1040, 0.22, 'sine', 0.13); tone(1560, 0.18, 'sine', 0.07, 0.05); },
+        sweep() { tone(420, 0.07, 'square', 0.045); },
+        unlock() {
+          try { getCtx() && getCtx().state === 'suspended' && getCtx().resume(); } catch (e) { }
+        }
+      };
+    })();
+    // Unlock audio context on first user interaction (autoplay policy)
+    ['pointerdown', 'keydown'].forEach(evt => {
+      window.addEventListener(evt, () => SoundFX.unlock(), { once: true });
+    });
+
+    let soundEnabled = true;
+    function playSfx(name) {
+      if (!soundEnabled) return;
+      try { SoundFX[name] && SoundFX[name](); } catch (e) { }
+    }
+
+    /* ================= LEADERBOARD (session only, no backend) ================= */
+    const LeaderboardModule = (function () {
+      const entries = []; // {name, pursuit, result, sortValue}
+      const collectorNames = [
+        "A. Vance Whitfield", "Margot Reyes-Lindqvist", "Desmond Achterberg",
+        "You", "A Discreet Collector", "M. Okonkwo-Hale", "Lady Ferreira-Stone"
+      ];
+      let youUsed = false;
+
+      function pickName() {
+        if (!youUsed) { youUsed = true; return "You"; }
+        const pool = collectorNames.filter(n => n !== "You");
+        return pool[Math.floor(Math.random() * pool.length)];
+      }
+
+      function render() {
+        const body = document.getElementById('leaderboardBody');
+        if (!entries.length) {
+          body.innerHTML = '<div class="lb-row lb-empty"><span style="grid-column:1/-1; text-align:center; color:var(--bone-dim);">No trials completed yet this session.</span></div>';
+          return;
+        }
+        const sorted = [...entries].sort((a, b) => b.sortValue - a.sortValue).slice(0, 8);
+        body.innerHTML = sorted.map((e, i) => `
+      <div class="lb-row ${e.isNew ? 'lb-new' : ''}">
+        <span class="lb-rank">${i + 1}</span>
+        <span class="lb-name">${e.name}</span>
+        <span class="lb-pursuit">${e.pursuit}</span>
+        <span class="lb-result">${e.result}</span>
+      </div>
+    `).join('');
+        entries.forEach(e => e.isNew = false);
+      }
+
+      function add(pursuit, result, sortValue) {
+        entries.forEach(e => e.isNew = false);
+        entries.push({ name: pickName(), pursuit, result, sortValue, isNew: true });
+        render();
+      }
+
+      render();
+      return { add };
+    })();
+
+    /* ================= MINI GAME: CATCH THE GOLDEN BRICK ================= */
+    (function () {
+      const wrap = document.getElementById('gameCanvasWrap');
+      const stage = document.getElementById('gameStage');
+      const basket = document.getElementById('basket');
+      const overlayStart = document.getElementById('gameOverlayStart');
+      const overlayWin = document.getElementById('gameOverlayWin');
+      const overlayLose = document.getElementById('gameOverlayLose');
+      const scoreDisplay = document.getElementById('scoreDisplay');
+      const strikesDisplay = document.getElementById('strikesDisplay');
+      const timeDisplay = document.getElementById('timeDisplay');
+      const progressFill = document.getElementById('progressFill');
+      const progressLabel = document.getElementById('progressLabel');
+
+      const WIN_SCORE = 10;
+      const MAX_STRIKES = 3;
+      const GAME_DURATION = 45;
+
+      let running = false;
+      let score = 0, strikes = 0, timeLeft = GAME_DURATION;
+      let basketX = 50; // percent
+      let items = [];
+      let spawnTimer = null;
+      let countdownTimer = null;
+      let rafId = null;
+      let stageW = 0, stageH = 0;
+
+      function updateStageMetrics() {
+        const r = wrap.getBoundingClientRect();
+        stageW = r.width; stageH = r.height;
+      }
+      updateStageMetrics();
+      window.addEventListener('resize', updateStageMetrics);
+
+      function setBasketX(xPercent) {
+        basketX = Math.max(4, Math.min(96, xPercent));
+        basket.style.left = basketX + '%';
+      }
+
+      // pointer / mouse control
+      wrap.addEventListener('pointermove', (e) => {
+        if (!running) return;
+        const r = wrap.getBoundingClientRect();
+        const pct = ((e.clientX - r.left) / r.width) * 100;
+        setBasketX(pct);
+      });
+      wrap.addEventListener('touchmove', (e) => {
+        if (!running) return;
+        const t = e.touches[0];
+        const r = wrap.getBoundingClientRect();
+        const pct = ((t.clientX - r.left) / r.width) * 100;
+        setBasketX(pct);
+        e.preventDefault();
+      }, { passive: false });
+
+      // keyboard control
+      let keyState = { left: false, right: false };
+      window.addEventListener('keydown', (e) => {
+        if (!running) return;
+        if (e.key === 'ArrowLeft') keyState.left = true;
+        if (e.key === 'ArrowRight') keyState.right = true;
+      });
+      window.addEventListener('keyup', (e) => {
+        if (e.key === 'ArrowLeft') keyState.left = false;
+        if (e.key === 'ArrowRight') keyState.right = false;
+      });
+
+      function spawnItem() {
+        const isGold = Math.random() < 0.7;
+        const el = document.createElement('div');
+        el.className = 'falling-item ' + (isGold ? 'gold' : 'bad');
+        const xPercent = 6 + Math.random() * 88;
+        el.style.left = xPercent + '%';
+        wrap.appendChild(el);
+        items.push({
+          el, x: xPercent, y: -60, isGold,
+          speed: 1.6 + Math.random() * 1.6 + (score * 0.04)
+        });
+      }
+
+      function clearItems() {
+        items.forEach(it => it.el.remove());
+        items = [];
+      }
+
+      function updateHUD() {
+        scoreDisplay.textContent = `${score} / ${WIN_SCORE}`;
+        strikesDisplay.textContent = `${strikes} / ${MAX_STRIKES}`;
+        timeDisplay.textContent = `0:${String(timeLeft).padStart(2, '0')}`;
+        progressFill.style.width = Math.min(100, (score / WIN_SCORE) * 100) + '%';
+        progressLabel.textContent = `${score} / ${WIN_SCORE} caught`;
+      }
+
+      function gameLoop() {
+        if (!running) return;
+
+        // keyboard movement
+        if (keyState.left) setBasketX(basketX - 1.6);
+        if (keyState.right) setBasketX(basketX + 1.6);
+
+        updateStageMetrics();
+        const basketYPercent = ((stageH - 64) / stageH) * 100; // basket sits near bottom
+        for (let i = items.length - 1; i >= 0; i--) {
+          const it = items[i];
+          it.y += it.speed;
+          it.el.style.top = it.y + 'px';
+
+          // collision check near basket zone
+          if (it.y > stageH - 80 && it.y < stageH - 20) {
+            const dx = Math.abs(it.x - basketX);
+            if (dx < 9) {
+              // caught
+              if (it.isGold) {
+                score++;
+                flashCatch(it.x, true);
+                playSfx('catch');
+                showToast("Golden brick caught — " + score + " / " + WIN_SCORE);
+              } else {
+                strikes++;
+                flashCatch(it.x, false);
+                playSfx('strike');
+              }
+              it.el.remove();
+              items.splice(i, 1);
+              updateHUD();
+              if (score >= WIN_SCORE) { return endGame(true); }
+              if (strikes >= MAX_STRIKES) { return endGame(false); }
+              continue;
+            }
+          }
+
+          if (it.y > stageH + 20) {
+            it.el.remove();
+            items.splice(i, 1);
+          }
+        }
+
+        rafId = requestAnimationFrame(gameLoop);
+      }
+
+      function flashCatch(xPercent, good) {
+        const burst = document.createElement('div');
+        burst.style.position = 'absolute';
+        burst.style.left = xPercent + '%';
+        burst.style.bottom = '40px';
+        burst.style.width = '10px';
+        burst.style.height = '10px';
+        burst.style.borderRadius = '50%';
+        burst.style.transform = 'translate(-50%,0) scale(1)';
+        burst.style.background = good ? 'rgba(212,175,55,0.8)' : 'rgba(180,60,60,0.7)';
+        burst.style.boxShadow = good ? '0 0 24px rgba(212,175,55,0.8)' : '0 0 16px rgba(180,60,60,0.7)';
+        burst.style.transition = 'transform .5s ease-out, opacity .5s ease-out';
+        burst.style.zIndex = 6;
+        wrap.appendChild(burst);
+        requestAnimationFrame(() => {
+          burst.style.transform = 'translate(-50%,0) scale(6)';
+          burst.style.opacity = '0';
+        });
+        setTimeout(() => burst.remove(), 550);
+      }
+
+      function startGame() {
+        overlayStart.classList.add('hidden');
+        overlayWin.classList.add('hidden');
+        overlayLose.classList.add('hidden');
+        score = 0; strikes = 0; timeLeft = GAME_DURATION;
+        clearItems();
+        setBasketX(50);
+        updateHUD();
+        running = true;
+
+        spawnTimer = setInterval(spawnItem, 700);
+        countdownTimer = setInterval(() => {
+          timeLeft--;
+          updateHUD();
+          if (timeLeft <= 5 && timeLeft > 0) playSfx('tick');
+          if (timeLeft <= 0) {
+            endGame(score >= WIN_SCORE ? true : false, true);
+          }
+        }, 1000);
+
+        rafId = requestAnimationFrame(gameLoop);
+      }
+
+      function endGame(won, timeOut) {
+        running = false;
+        clearInterval(spawnTimer);
+        clearInterval(countdownTimer);
+        cancelAnimationFrame(rafId);
+        clearItems();
+
+        if (won) {
+          overlayWin.classList.remove('hidden');
+          launchConfetti();
+          playSfx('win');
+          showToast("VIP Status unlocked — welcome to the inner circle");
+          const timeUsed = GAME_DURATION - timeLeft;
+          LeaderboardModule.add("Catch the Golden Brick", `${timeUsed}s`, 1000 - timeUsed);
+        } else {
+          const msg = document.getElementById('loseMessage');
+          playSfx('lose');
+          if (timeOut && score < WIN_SCORE) {
+            msg.textContent = `Time expired with ${score} of ${WIN_SCORE} caught. Precision, not haste, befits a collector.`;
+          } else {
+            msg.textContent = `Three plain bricks slipped past the tray. Even the finest collectors are permitted a second attempt.`;
+          }
+          overlayLose.classList.remove('hidden');
+        }
+      }
+
+      document.getElementById('startGameBtn').addEventListener('click', startGame);
+      document.getElementById('overlayStartBtn').addEventListener('click', startGame);
+      document.getElementById('retryBtn').addEventListener('click', startGame);
+      document.getElementById('claimBadgeBtn').addEventListener('click', () => {
+        overlayWin.classList.add('hidden');
+        showToast("Badge saved to your profile for this visit");
+      });
+
+      // expose a stop hook so tab-switching can halt this game cleanly
+      window.__stopCatchGame = function () {
+        running = false;
+        clearInterval(spawnTimer);
+        clearInterval(countdownTimer);
+        cancelAnimationFrame(rafId);
+        clearItems();
+        overlayWin.classList.add('hidden');
+        overlayLose.classList.add('hidden');
+        overlayStart.classList.remove('hidden');
+      };
+    })();
+
+    /* ================= GAME TABS ================= */
+    (function () {
+      const tabCatch = document.getElementById('tabCatch');
+      const tabRitual = document.getElementById('tabRitual');
+      const panelCatch = document.getElementById('panelCatch');
+      const panelRitual = document.getElementById('panelRitual');
+
+      function showTab(which) {
+        const showCatch = which === 'catch';
+        tabCatch.classList.toggle('active', showCatch);
+        tabRitual.classList.toggle('active', !showCatch);
+        panelCatch.style.display = showCatch ? '' : 'none';
+        panelRitual.style.display = showCatch ? 'none' : '';
+        // pause whichever game isn't visible
+        if (showCatch) {
+          if (window.__stopRitualGame) window.__stopRitualGame();
+        } else {
+          if (window.__stopCatchGame) window.__stopCatchGame();
+        }
+      }
+      tabCatch.addEventListener('click', () => showTab('catch'));
+      tabRitual.addEventListener('click', () => showTab('ritual'));
+    })();
+
+    /* ================= MINI GAME 2: THE AUTHENTICATION RITUAL ================= */
+    (function () {
+      const wrap = document.getElementById('ritualCanvasWrap');
+      const needle = document.getElementById('ritualNeedle');
+      const goldZonePath = document.getElementById('ritualGoldZone');
+      const overlayStart = document.getElementById('ritualOverlayStart');
+      const overlayWin = document.getElementById('ritualOverlayWin');
+      const startBtn = document.getElementById('startRitualBtn');
+      const overlayStartBtn = document.getElementById('ritualOverlayStartBtn');
+      const claimBtn = document.getElementById('ritualClaimBtn');
+      const streakDisplay = document.getElementById('ritualStreakDisplay');
+      const attemptsDisplay = document.getElementById('ritualAttemptsDisplay');
+      const bestDisplay = document.getElementById('ritualBestDisplay');
+      const progressFill = document.getElementById('ritualProgressFill');
+      const progressLabel = document.getElementById('ritualProgressLabel');
+      const sealDots = document.querySelectorAll('.ritual-seal-dot');
+
+      const WIN_STREAK = 3;
+      const CX = 150, CY = 150, RADIUS = 118;
+
+      let running = false;
+      let angle = 0;          // current needle angle, degrees, 0 = up
+      let direction = 1;
+      let speed = 2.4;        // degrees per frame
+      let zoneCenter = 0;     // degrees
+      let zoneWidth = 70;     // degrees, narrows each round
+      let streak = 0;
+      let attempts = 0;
+      let bestStreak = 0;
+      let rafId = null;
+
+      function describeArc(centerDeg, widthDeg) {
+        // arc centered at centerDeg (0 = up/north), spanning widthDeg, drawn on circle radius RADIUS
+        const startDeg = centerDeg - widthDeg / 2 - 90; // convert so 0deg = up
+        const endDeg = centerDeg + widthDeg / 2 - 90;
+        const startRad = startDeg * Math.PI / 180;
+        const endRad = endDeg * Math.PI / 180;
+        const x1 = CX + RADIUS * Math.cos(startRad);
+        const y1 = CY + RADIUS * Math.sin(startRad);
+        const x2 = CX + RADIUS * Math.cos(endRad);
+        const y2 = CY + RADIUS * Math.sin(endRad);
+        const largeArc = widthDeg > 180 ? 1 : 0;
+        return `M ${x1} ${y1} A ${RADIUS} ${RADIUS} 0 ${largeArc} 1 ${x2} ${y2}`;
+      }
+
+      function newZone() {
+        zoneCenter = Math.random() * 360;
+        goldZonePath.setAttribute('d', describeArc(zoneCenter, zoneWidth));
+      }
+
+      function angleDiff(a, b) {
+        let d = Math.abs(a - b) % 360;
+        return d > 180 ? 360 - d : d;
+      }
+
+      function updateHUD() {
+        streakDisplay.textContent = `${streak} / ${WIN_STREAK}`;
+        attemptsDisplay.textContent = `${attempts} attempt${attempts === 1 ? '' : 's'}`;
+        bestDisplay.textContent = bestStreak > 0 ? `Best: ${bestStreak}` : 'Best: —';
+        progressFill.style.width = Math.min(100, (streak / WIN_STREAK) * 100) + '%';
+        progressLabel.textContent = `${streak} / ${WIN_STREAK} sealed`;
+        sealDots.forEach((dot, i) => dot.classList.toggle('filled', i < streak));
+      }
+
+      function tick() {
+        if (!running) return;
+        angle += speed * direction;
+        if (angle >= 360) angle -= 360;
+        if (angle < 0) angle += 360;
+        needle.setAttribute('transform', `rotate(${angle} ${CX} ${CY})`);
+        rafId = requestAnimationFrame(tick);
+      }
+
+      function stopNeedle() {
+        const diff = angleDiff(angle, zoneCenter);
+        attempts++;
+        if (diff <= zoneWidth / 2) {
+          // success
+          streak++;
+          playSfx('seal');
+          bestStreak = Math.max(bestStreak, streak);
+          zoneWidth = Math.max(30, zoneWidth - 12); // narrows each success
+          speed = Math.min(5, speed + 0.4);
+          updateHUD();
+          if (streak >= WIN_STREAK) {
+            return endGame(true);
+          }
+          newZone();
+        } else {
+          // miss
+          playSfx('strike');
+          streak = 0;
+          zoneWidth = 70;
+          speed = 2.4;
+          updateHUD();
+          newZone();
+        }
+      }
+
+      function handleActivate(e) {
+        if (e) { e.preventDefault(); }
+        if (!running) return;
+        stopNeedle();
+      }
+
+      wrap.addEventListener('pointerdown', handleActivate);
+      window.addEventListener('keydown', (e) => {
+        if (!running) return;
+        if (e.code === 'Space') { e.preventDefault(); stopNeedle(); }
+      });
+
+      function startGame() {
+        overlayStart.classList.add('hidden');
+        overlayWin.classList.add('hidden');
+        streak = 0; attempts = 0; angle = Math.random() * 360; direction = Math.random() > 0.5 ? 1 : -1;
+        zoneWidth = 70; speed = 2.4;
+        updateHUD();
+        newZone();
+        running = true;
+        rafId = requestAnimationFrame(tick);
+      }
+
+      function endGame(won) {
+        running = false;
+        cancelAnimationFrame(rafId);
+        if (won) {
+          overlayWin.classList.remove('hidden');
+          launchConfetti();
+          playSfx('win');
+          showToast("Brick authenticated — VIP status unlocked");
+          LeaderboardModule.add("The Authentication Ritual", `${attempts} attempts`, 1000 - attempts);
+        }
+      }
+
+      startBtn.addEventListener('click', startGame);
+      overlayStartBtn.addEventListener('click', startGame);
+      claimBtn.addEventListener('click', () => {
+        overlayWin.classList.add('hidden');
+        showToast("Badge saved to your profile for this visit");
+      });
+
+      window.__stopRitualGame = function () {
+        running = false;
+        cancelAnimationFrame(rafId);
+        overlayWin.classList.add('hidden');
+        overlayStart.classList.remove('hidden');
+      };
+    })();
+
+    /* ================= CONFIRMATION BRICK (CSS 3D, same as Hero) ================= */
+
+    /* ================= CONFETTI ================= */
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const colors = ['#d4af37', '#f0cd5e', '#9c1c1c', '#f3ecdf', '#7a1313'];
+      const pieces = [];
+      const count = 160;
+
+      for (let i = 0; i < count; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: -20 - Math.random() * canvas.height * 0.5,
+          w: 6 + Math.random() * 6,
+          h: 10 + Math.random() * 8,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          vy: 2 + Math.random() * 3,
+          vx: (Math.random() - 0.5) * 2,
+          sway: Math.random() * Math.PI * 2,
+          shape: Math.random() > 0.5 ? 'rect' : 'brick'
+        });
+      }
+
+      let frame = 0;
+      const maxFrames = 220;
+
+      function draw() {
+        frame++;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          p.y += p.vy;
+          p.x += p.vx + Math.sin(p.sway + frame * 0.05) * 0.6;
+          p.rot += p.rotSpeed;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot * Math.PI / 180);
+          ctx.fillStyle = p.color;
+          if (p.shape === 'brick') {
+            ctx.fillRect(-p.w, -p.h / 2.4, p.w * 2, p.h / 1.2);
+          } else {
+            ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          }
+          ctx.restore();
+        });
+
+        if (frame < maxFrames) {
+          requestAnimationFrame(draw);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+      draw();
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    }
+  </script>
+
+</body>
+
+</html>
